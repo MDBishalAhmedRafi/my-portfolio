@@ -1,39 +1,72 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
-                
-const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
-];
-                  const [isOpen, setIsOpen] = useState(false);
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
+  ];
 
-  // Toggle mobile menu
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("Home");
+
   const toggleMenu = () => setIsOpen(!isOpen);
-
-  // Close mobile menu when link clicked
   const handleLinkClick = () => setIsOpen(false);
-                return (
-                                <nav className="fixed w-full bg-white shadow-md z-50">
+
+  // Close menu if screen resizes above md
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) setIsOpen(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Scroll spy logic
+  useEffect(() => {
+    const sections = navLinks.map((link) =>
+      document.querySelector(link.href)
+    );
+
+    const handleScroll = () => {
+      const scrollY = window.scrollY + 100;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section && scrollY >= section.offsetTop) {
+          setActiveSection(navLinks[i].name);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // run once on load
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-700 via-indigo-800 to-purple-800 shadow-lg z-50 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo / Name */}
         <a
           href="#home"
-          className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition"
+          className="text-2xl font-bold text-white hover:text-indigo-300 transition"
         >
-          YourName
+          MD Bishal Ahmed Rafi
         </a>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <ul className="hidden md:flex space-x-8 text-indigo-200 font-medium">
           {navLinks.map((link) => (
             <li key={link.name}>
               <a
                 href={link.href}
-                className="hover:text-blue-600 transition"
+                className={`transition ${
+                  activeSection === link.name
+                    ? "text-white font-semibold border-b-2 border-white pb-1"
+                    : "hover:text-white"
+                }`}
                 onClick={handleLinkClick}
               >
                 {link.name}
@@ -45,46 +78,36 @@ const navLinks = [
         {/* Mobile Hamburger */}
         <button
           onClick={toggleMenu}
-          className="md:hidden focus:outline-none text-blue-600"
-          aria-label="Toggle Menu"
+          className="md:hidden focus:outline-none focus:ring-2 focus:ring-indigo-300 rounded p-2 text-indigo-200"
         >
-          {/* Hamburger Icon */}
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {isOpen ? (
-              // X icon
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            ) : (
-              // Hamburger icon
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            )}
-          </svg>
+          {isOpen ? (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
         </button>
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <ul className="md:hidden bg-white border-t border-gray-200 space-y-2 px-6 py-4 font-medium text-gray-700">
+      <div
+        className={`md:hidden overflow-hidden transition-max-height duration-300 ease-in-out bg-gradient-to-r from-blue-700 via-indigo-800 to-purple-800 border-t border-indigo-700 ${
+          isOpen ? "max-h-96" : "max-h-0"
+        }`}
+      >
+        <ul className="flex flex-col space-y-3 px-6 py-4 font-medium text-indigo-200">
           {navLinks.map((link) => (
             <li key={link.name}>
               <a
                 href={link.href}
-                className="block hover:text-blue-600 transition"
+                className={`block transition ${
+                  activeSection === link.name
+                    ? "text-white font-semibold"
+                    : "hover:text-white"
+                }`}
                 onClick={handleLinkClick}
               >
                 {link.name}
@@ -92,9 +115,9 @@ const navLinks = [
             </li>
           ))}
         </ul>
-      )}
+      </div>
     </nav>
-                );
+  );
 };
 
 export default Navbar;

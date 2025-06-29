@@ -14,31 +14,31 @@ import { SiTailwindcss, SiMongodb, SiJavascript, SiExpress } from "react-icons/s
 const skillsData = [
   {
     category: "Frontend",
-    color: "from-blue-100 to-blue-50",
+    color: "from-indigo-700 to-purple-700",
     skills: [
-      { name: "HTML5", icon: <FaHtml5 className="text-orange-600" /> },
-      { name: "CSS3", icon: <FaCss3Alt className="text-blue-600" /> },
-      { name: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> },
+      { name: "HTML5", icon: <FaHtml5 className="text-orange-400" /> },
+      { name: "CSS3", icon: <FaCss3Alt className="text-blue-400" /> },
+      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
       { name: "React", icon: <FaReact className="text-cyan-400" /> },
-      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-500" /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400" /> },
     ],
   },
   {
     category: "Backend",
-    color: "from-indigo-100 to-indigo-50",
+    color: "from-indigo-700 to-purple-700",
     skills: [
-      { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
-      { name: "Express.js", icon: <SiExpress className="text-gray-700" /> },
-      { name: "MongoDB", icon: <SiMongodb className="text-green-700" /> },
-      { name: "Database", icon: <FaDatabase className="text-purple-700" /> },
+      { name: "Node.js", icon: <FaNodeJs className="text-green-400" /> },
+      { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
+      { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+      { name: "Database", icon: <FaDatabase className="text-purple-400" /> },
     ],
   },
   {
     category: "Tools",
-    color: "from-purple-100 to-purple-50",
+    color: "from-indigo-700 to-purple-700",
     skills: [
-      { name: "GitHub", icon: <FaGithub className="text-black" /> },
-      { name: "Figma", icon: <FaFigma className="text-pink-500" /> },
+      { name: "GitHub", icon: <FaGithub className="text-white" /> },
+      { name: "Figma", icon: <FaFigma className="text-pink-400" /> },
     ],
   },
 ];
@@ -47,39 +47,49 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="bg-gradient-to-b from-white to-purple-50 py-24 px-6 md:px-10"
+      className="relative z-10 bg-gradient-to-br from-blue-700 via-indigo-800 to-purple-800 py-16 px-6 md:px-10 rounded-2xl overflow-hidden text-white"
     >
-      <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
-          My Skills
-        </h2>
-        <div className="w-20 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 mx-auto mt-2 rounded-full" />
-        <p className="text-gray-600 mt-4 max-w-xl mx-auto">
+      {/* Background Gradient Blobs */}
+      <motion.div
+        className="absolute -top-20 -left-32 w-[400px] h-[400px] bg-indigo-400 opacity-20 rounded-full blur-3xl animate-pulse"
+        animate={{ y: [0, 20, 0] }}
+        transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute -bottom-24 -right-28 w-[300px] h-[300px] bg-purple-400 opacity-20 rounded-full blur-3xl animate-pulse"
+        animate={{ y: [0, -20, 0] }}
+        transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+      />
+
+      {/* Section Title */}
+      <div className="relative z-10 text-center mb-16 max-w-4xl mx-auto">
+        <h2 className="text-4xl font-extrabold">My Skills</h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400 mx-auto mt-4 rounded-full" />
+        <p className="text-indigo-300 mt-4">
           Here are the technologies and tools I use to build modern web applications.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-10">
+      {/* Skill Cards */}
+      <div className="relative z-10 grid md:grid-cols-3 gap-10">
         {skillsData.map((category, index) => (
           <motion.div
             key={index}
-            className={`bg-gradient-to-br ${category.color} p-6 rounded-2xl shadow-lg backdrop-blur-md`}
+            className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-6"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: index * 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-bold text-indigo-700 mb-4">
-              {category.category}
-            </h3>
+            <h3 className="text-xl font-bold mb-4">{category.category}</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {category.skills.map((skill, i) => (
                 <div
                   key={i}
-                  className="flex flex-col items-center justify-center bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition"
+                  className="flex flex-col items-center justify-center bg-white/20 rounded-xl p-4 shadow-md hover:shadow-xl transition"
                 >
                   <div className="text-2xl mb-2">{skill.icon}</div>
-                  <p className="text-sm font-medium text-gray-700">{skill.name}</p>
+                  <p className="text-sm font-medium">{skill.name}</p>
                 </div>
               ))}
             </div>
