@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="bg-gradient-to-r from-blue-700 via-indigo-800 to-purple-800 text-white py-10 px-6"
+      className="bg-gradient-to-r from-blue-700 via-indigo-800 to-purple-800  text-white py-10 px-6"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -19,14 +19,14 @@ const Footer = () => {
             MD Bishal Ahmed Rafi
           </h2>
           <p className="text-sm text-indigo-200">
-            Full Stack MERN Developer • React Enthusiast
+            Junior Full Stack MERN Developer • React Enthusiast
           </p>
         </div>
 
         {/* Social Icons */}
         <div className="flex gap-6 text-white">
           <a
-            href="https://facebook.com/yourfacebook"
+            href="https://www.facebook.com/profile.php?id=100078144576684"
             target="_blank"
             rel="noreferrer"
             className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition"
@@ -35,7 +35,7 @@ const Footer = () => {
             <FaFacebookF size={18} />
           </a>
           <a
-            href="https://linkedin.com/in/yourlinkedin"
+            href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQGF50xI1sqKmQAAAZe_T6uYfxR-AtDVfFZKew_BymgPXfmax61-VbkM5hVBRAtFtQucoIWkauXoSjUU_K-A28swoxifAH9M20jgECDw32rEP8Ny_eL37kshgoOduyr8-wfrTnY=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fyourlinkedin"
             target="_blank"
             rel="noreferrer"
             className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition"
@@ -44,7 +44,7 @@ const Footer = () => {
             <FaLinkedinIn size={18} />
           </a>
           <a
-            href="https://github.com/yourgithub"
+            href="https://github.com/MDBishalAhmedRafi"
             target="_blank"
             rel="noreferrer"
             className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition"

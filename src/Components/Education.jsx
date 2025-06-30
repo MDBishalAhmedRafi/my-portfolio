@@ -8,7 +8,6 @@ const educationData = [
     year: "Running (2nd Year)",
     board: "Board: Dhaka",
     institution: "Govt Tolaram College",
-    gpa: "N/A",
     current: true,
   },
   {
@@ -31,7 +30,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="relative z-10 bg-gradient-to-br from-blue-700 via-indigo-800 to-purple-800 py-16 px-6 md:px-10 text-white overflow-hidden"
+      className="rounded-2xl relative z-10 bg-gradient-to-br from-blue-700 via-indigo-800 to-purple-800 py-16 px-6 md:px-10 text-white overflow-hidden"
     >
       {/* Background Gradient Blobs */}
       <div className="absolute -top-20 -left-32 w-[400px] h-[400px] bg-indigo-400 opacity-20 rounded-full blur-3xl animate-pulse z-0"></div>

@@ -6,7 +6,7 @@ const Experience = () => {
   return (
     <section
   id="experience"
-  className="relative bg-gradient-to-br from-blue-700 via-indigo-800 to-purple-800 py-16 px-6 md:px-10 overflow-hidden z-10 text-white"
+  className="rounded-2xl relative bg-gradient-to-br from-blue-700 via-indigo-800 to-purple-800 py-16 px-6 md:px-10 overflow-hidden z-10 text-white"
 >
   {/* Background Blobs */}
   <motion.div

@@ -26,36 +26,36 @@ const techIcons = {
 const projects = [
   {
     name: "Food Sharing Web App",
-    images: ["/project1-1.jpg"],
-    liveLink: "https://your-live-link1.com",
-    githubLink: "https://github.com/yourname/project1",
+    images: ["https://i.ibb.co/Q7yjk6Yy/food-share.png"],
+    liveLink: "https://ssignment-11.web.app",
+    githubLink: "https://github.com/MDBishalAhmedRafi/food-share-client",
     stack: ["React", "Node.js", "MongoDB", "Tailwind CSS", "JWT"],
     description:
-      "A platform where users can donate extra food, and needy users can request or claim donations.",
+      "Food Sharing Website is a community-focused web platform where users can donate extra food, request available food, and manage shared items.",
     challenges: "Handling secure food requests & ensuring role-based routing.",
     futurePlans: "Add real-time chat and Firebase push notifications.",
     animation: "fade",
   },
   {
     name: "Recipe Book",
-    images: ["/project2-1.jpg"],
-    liveLink: "https://your-live-link2.com",
-    githubLink: "https://github.com/yourname/project2",
+    images: ["https://i.ibb.co/3mGk8pTK/recipe-book.png"],
+    liveLink: "https://recipe-book-app-38172.web.app/",
+    githubLink: "https://github.com/MDBishalAhmedRafi/recipe-book-client",
     stack: ["React", "Express.js", "MongoDB", "Framer Motion"],
     description:
-      "A recipe management app allowing users to add, edit, like, and share recipes.",
+      "A beautiful and interactive Recipe Book web app built with React, Tailwind CSS, and Firebase Hosting. Explore a variety of recipes with a smooth, modern UI powered by animations and sliders.",
     challenges: "Syncing likes in frontend & backend, and modal management.",
     futurePlans: "Add voice search and recipe export to PDF.",
     animation: "slide",
   },
   {
     name: "Job Portal App",
-    images: ["/project3-1.jpg"],
-    liveLink: "https://your-live-link3.com",
-    githubLink: "https://github.com/yourname/project3",
+    images: ["https://i.ibb.co/3y0CK0pd/Job-Portal.png"],
+    liveLink: "https://job-portal-project-89560.web.app/",
+    githubLink: "https://github.com/MDBishalAhmedRafi/job-portal-project",
     stack: ["React", "Firebase", "Tailwind CSS"],
     description:
-      "A simple job listing site with authentication and filtering by category.",
+      "JobTrack is an innovative and user-friendly web application designed to help job seekers explore a wide variety of job opportunities across multiple companies..",
     challenges: "Protected routes and Firebase auth integration.",
     futurePlans: "Implement company dashboard and resume upload system.",
     animation: "zoom",
@@ -79,7 +79,7 @@ const MyProjects = () => {
   return (
     <section
       id="projects"
-      className="relative bg-gradient-to-br from-blue-700 via-indigo-800 to-purple-800 py-16 px-4 sm:px-6 md:px-10 text-white z-10"
+      className="rounded-2xl relative bg-gradient-to-br from-blue-700 via-indigo-800 to-purple-800 py-16 px-4 sm:px-6 md:px-10 text-white z-10"
     >
 
       <div className="relative z-10">

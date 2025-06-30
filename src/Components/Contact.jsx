@@ -36,7 +36,7 @@ const Contact = () => {
   return (
   <section
     id="contact"
-    className="py-20 px-6 sm:px-10 bg-gradient-to-br from-blue-700 via-indigo-800 to-purple-800 text-white"
+    className="rounded-2xl py-20 px-6 sm:px-10 bg-gradient-to-br from-blue-700 via-indigo-800 to-purple-800 text-white"
   >
     <motion.div
       className="text-center"

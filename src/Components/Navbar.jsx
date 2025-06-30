@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import logo from '../assets/logo.png'
 const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "#home" },
@@ -54,7 +54,7 @@ const Navbar = () => {
           href="#home"
           className="text-2xl font-bold text-white hover:text-indigo-300 transition"
         >
-          MD Bishal Ahmed Rafi
+          <img src={logo} className="h-[40px]" alt="" />
         </a>
 
         <ul className="hidden md:flex space-x-8 text-indigo-200 font-medium">

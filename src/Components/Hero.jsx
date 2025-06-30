@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
-import image from '../assets/my_image.jpg'
+import image from '../assets/image-2.png'
 import { Typewriter } from 'react-simple-typewriter';
 
 const Hero = () => {
@@ -30,7 +30,7 @@ const Hero = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <p className="text-sm tracking-widest text-indigo-300 uppercase">
+        <p className="text-sm  tracking-widest text-indigo-300 uppercase">
           Welcome to my world
         </p>
 
@@ -40,7 +40,7 @@ const Hero = () => {
           <span className="text-indigo-300">a</span>{" "}
           <span className="text-blue-400">
             <Typewriter
-              words={["Full Stack MERN Developer.", "Web Developer.", "React Enthusiast."]}
+              words={["Web Developer.", "React Enthusiast."]}
               loop={0}
               cursor
               cursorStyle="|"
@@ -52,9 +52,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-indigo-300 max-w-xl">
-          I use animation as a third dimension to simplify experiences and
-          guide through each interaction. I don’t add motion just to spruce
-          things up, but to enhance user understanding.
+          This is MD Bishal Ahmed Rafi, a passionate and self-motivated Junior Full Stack Developer from Bangladesh. I love building real-world applications and continuously learning new technologies. Clean code, good UI/UX, and efficient backend — these are what I care about most.
         </p>
 
         {/* Social Icons and Resume Button */}
@@ -65,7 +63,7 @@ const Hero = () => {
             </p>
             <div className="flex gap-6 text-white">
                       <a
-                        href="https://facebook.com/yourfacebook"
+                        href="https://www.facebook.com/profile.php?id=100078144576684"
                         target="_blank"
                         rel="noreferrer"
                         className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition"
@@ -74,7 +72,7 @@ const Hero = () => {
                         <FaFacebookF size={18} />
                       </a>
                       <a
-                        href="https://linkedin.com/in/yourlinkedin"
+                        href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQGF50xI1sqKmQAAAZe_T6uYfxR-AtDVfFZKew_BymgPXfmax61-VbkM5hVBRAtFtQucoIWkauXoSjUU_K-A28swoxifAH9M20jgECDw32rEP8Ny_eL37kshgoOduyr8-wfrTnY=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fyourlinkedin"
                         target="_blank"
                         rel="noreferrer"
                         className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition"
@@ -83,7 +81,7 @@ const Hero = () => {
                         <FaLinkedinIn size={18} />
                       </a>
                       <a
-                        href="https://github.com/yourgithub"
+                        href="https://github.com/MDBishalAhmedRafi"
                         target="_blank"
                         rel="noreferrer"
                         className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition"
@@ -114,7 +112,7 @@ const Hero = () => {
         <img
           src={image} 
           alt="Profile of MD Bishal Ahmed Rafi"
-          className="rounded-2xl shadow-xl w-[350px] md:w-[400px]"
+          className="rounded-2xl shadow-xl w-[350px] h-[500px] md:w-[400px]"
         />
       </motion.div>
     </section>
