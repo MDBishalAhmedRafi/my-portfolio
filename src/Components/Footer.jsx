@@ -12,7 +12,7 @@ const Footer = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Name and Tagline */}
         <div className="text-center md:text-left space-y-2">
           <h2 className="text-xl sm:text-2xl font-bold text-white tracking-wide">

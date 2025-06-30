@@ -49,7 +49,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-700 via-indigo-800 to-purple-800 shadow-lg z-50 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="px-6 py-4 flex justify-between items-center">
         <a
           href="#home"
           className="text-2xl font-bold text-white hover:text-indigo-300 transition"

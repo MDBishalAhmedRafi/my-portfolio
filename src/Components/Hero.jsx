@@ -93,11 +93,11 @@ const Hero = () => {
           </div>
 
           <div>
-           <a href='https://docs.google.com/forms/d/e/1FAIpQLSdAEt-8PKW9y0AI_yk9IsIXKhS9I3fqDHwCYBDtSpJQMmgosA/viewform' target='_blank' rel="noreferrer">
+           {/* <a href='https://docs.google.com/forms/d/e/1FAIpQLSdAEt-8PKW9y0AI_yk9IsIXKhS9I3fqDHwCYBDtSpJQMmgosA/viewform' target='_blank' rel="noreferrer"> */}
              <button className='btn btn-outline shadow-md hover:shadow-lg text-indigo-300 border-indigo-300 hover:bg-indigo-700 hover:text-white transition'>
               My Resume
              </button>
-           </a>
+           {/* </a> */}
           </div>
         </div>
       </motion.div>
