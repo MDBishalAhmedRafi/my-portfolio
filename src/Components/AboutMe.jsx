@@ -35,7 +35,7 @@ const AboutMe = () => {
 
         {/* Paragraphs */}
         <p className="text-indigo-200 leading-relaxed mb-4 text-center">
-          Hello! I’m <strong className="text-indigo-100">MD Bishal Ahmed Rafi</strong>, a passionate <span className="font-semibold text-sky-400">MERN Stack Developer</span> who loves crafting powerful and clean web applications using modern tools and technologies.
+          Hello! I’m <strong className="text-indigo-100">MD Bishal Ahmed Rafi</strong>, a passionate <span className="font-semibold text-sky-400">Junior Full Stack Developer</span> who loves crafting powerful and clean web applications using modern tools and technologies.
         </p>
 
         <p className="text-indigo-300 mb-4 text-center">

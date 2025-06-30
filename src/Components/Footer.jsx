@@ -19,7 +19,7 @@ const Footer = () => {
             MD Bishal Ahmed Rafi
           </h2>
           <p className="text-sm text-indigo-200">
-            Junior Full Stack MERN Developer • React Enthusiast
+            Junior Full Stack Developer • React Enthusiast
           </p>
         </div>
 
