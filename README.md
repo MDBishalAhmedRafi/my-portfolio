@@ -1,12 +1,50 @@
-# React + Vite
+# 🚀 MD Bishal Ahmed Rafi – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal **developer portfolio website**, built using **React.js**, **Tailwind CSS**, and modern UI/UX practices. This portfolio showcases my skills, projects, and experience as a Junior React.js Developer.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Website
 
-## Expanding the ESLint configuration
+🌐 [Visit My Portfolio](https://superlative-cobbler-95f74a.netlify.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📁 Repository
+
+📦 [GitHub – Portfolio Source Code](https://github.com/MDBishalAhmedRafi/my-portfolio)
+
+---
+
+## 🛠️ Built With
+
+- **React.js** – Component-based frontend library
+- **React Router DOM** – Client-side routing
+- **Tailwind CSS** – Utility-first CSS framework
+- **Framer Motion & AOS** – Smooth scroll and animation effects
+- **Lottie Files** – Engaging animated illustrations
+- **DaisyUI** – Prebuilt UI components for fast design
+- **Responsive Design** – Mobile-first and accessible layout
+
+---
+
+## 💼 Features
+
+- 🧑‍💼 **About Me** section with animated entrance
+- 🧰 **Skills** showcase with icons
+- 📂 **Projects** with live and GitHub links
+- 🎓 **Education** with degree details
+- ✉️ **Contact** form (functional or placeholder)
+- 📄 **Resume Download** button
+- 💬 **Testimonials** section (if added)
+- ⚙️ **Scroll-based navigation and animation**
+
+---
+
+
+## 📜 Getting Started Locally
+
+1. Clone the repository  
+```bash
+git clone https://github.com/MDBishalAhmedRafi/my-portfolio.git
+cd my-portfolio
