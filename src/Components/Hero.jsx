@@ -94,7 +94,12 @@ const Hero = () => {
 
           <div>
            {/* <a href='https://docs.google.com/forms/d/e/1FAIpQLSdAEt-8PKW9y0AI_yk9IsIXKhS9I3fqDHwCYBDtSpJQMmgosA/viewform' target='_blank' rel="noreferrer"> */}
-             <button className='btn btn-outline shadow-md hover:shadow-lg text-indigo-300 border-indigo-300 hover:bg-indigo-700 hover:text-white transition'>
+             <button onClick={() =>
+      window.open(
+        'https://drive.google.com/uc?export=download&id=11wbd5vpcW3Fz2WUfAobBv1C1QiVN_qwr',
+        'target_blank'
+      )
+    } className='btn btn-outline shadow-md hover:shadow-lg text-indigo-300 border-indigo-300 hover:bg-indigo-700 hover:text-white transition'>
               My Resume
              </button>
            {/* </a> */}

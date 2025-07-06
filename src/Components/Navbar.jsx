@@ -55,6 +55,7 @@ const Navbar = () => {
           className="text-2xl font-bold text-white hover:text-indigo-300 transition"
         >
           <img src={logo} className="h-[40px]" alt="" />
+          
         </a>
 
         <ul className="hidden md:flex space-x-8 text-indigo-200 font-medium">
