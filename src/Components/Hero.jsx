@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative z-10 rounded-2xl min-h-[auto] lg:h-screen lg:overflow-hidden flex flex-col-reverse md:flex-row items-center justify-between 
+      className="relative z-10 rounded-2xl min-h-[auto] lg:overflow-hidden flex flex-col-reverse md:flex-row items-center justify-between 
                  bg-gradient-to-br from-teal-800 via-slate-900 to-gray-900 px-6 md:px-10 py-16 text-white overflow-hidden"
     >
       {/* Background Gradient Blobs */}
