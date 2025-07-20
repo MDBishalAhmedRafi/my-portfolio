@@ -13,14 +13,14 @@ import {
 } from "react-icons/fa";
 
 const techIcons = {
-  React: <FaReact className="text-sky-400" size={18} />,
-  "Node.js": <FaNodeJs className="text-green-500" size={18} />,
-  MongoDB: <FaDatabase className="text-green-500" size={18} />,
+  React: <FaReact className="text-cyan-400" size={18} />,
+  "Node.js": <FaNodeJs className="text-emerald-400" size={18} />,
+  MongoDB: <FaDatabase className="text-emerald-400" size={18} />,
   "Tailwind CSS": <FaCss3Alt className="text-cyan-400" size={18} />,
   JWT: <FaJs className="text-yellow-400" size={18} />,
   Firebase: <FaFire className="text-yellow-400" size={18} />,
-  "Express.js": <FaLaptopCode className="text-gray-300" size={18} />,
-  "Framer Motion": <FaReact className="text-purple-500" size={18} />,
+  "Express.js": <FaLaptopCode className="text-slate-300" size={18} />,
+  "Framer Motion": <FaReact className="text-teal-500" size={18} />,
 };
 
 const projects = [
@@ -79,9 +79,8 @@ const MyProjects = () => {
   return (
     <section
       id="projects"
-      className="rounded-2xl relative bg-gradient-to-br from-blue-700 via-indigo-800 to-purple-800 py-16 px-4 sm:px-6 md:px-10 text-white z-10"
+      className="rounded-2xl relative bg-gradient-to-br from-teal-800 via-slate-900 to-gray-900 py-16 px-4 sm:px-6 md:px-10 text-white z-10"
     >
-
       <div className="relative z-10">
         <motion.h2
           className="text-3xl sm:text-4xl font-extrabold text-center text-white"
@@ -91,9 +90,9 @@ const MyProjects = () => {
         >
           🚀 My Projects
         </motion.h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400 mx-auto my-4 rounded-full" />
+        <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 mx-auto my-4 rounded-full" />
 
-        <p className="text-center text-indigo-200 max-w-2xl mx-auto mb-12 text-sm sm:text-base px-2">
+        <p className="text-center text-emerald-300 max-w-2xl mx-auto mb-12 text-sm sm:text-base px-2">
           Here are some of the major projects I’ve built recently using modern web technologies.
         </p>
 
@@ -113,21 +112,21 @@ const MyProjects = () => {
                 <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
                   {project.name}
                 </h3>
-                <p className="text-indigo-200 text-sm mb-4">{project.description}</p>
+                <p className="text-emerald-300 text-sm mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.stack.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-xs font-medium bg-white/20 text-indigo-100 rounded-full flex items-center gap-1"
+                      className="px-3 py-1 text-xs font-medium bg-white/20 text-emerald-100 rounded-full flex items-center gap-1"
                     >
                       {techIcons[tech]} {tech}
                     </span>
                   ))}
                 </div>
-                <p className="text-sm text-red-300 font-semibold mb-2">
+                <p className="text-red-400 font-semibold mb-2 text-sm">
                   ⚠️ <strong>Challenges:</strong> {project.challenges}
                 </p>
-                <p className="text-sm text-purple-200 mb-4">
+                <p className="text-cyan-300 mb-4 text-sm">
                   <strong>Future Plans:</strong> {project.futurePlans}
                 </p>
                 <div className="mt-auto pt-4 flex gap-4">
@@ -135,7 +134,7 @@ const MyProjects = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm font-semibold px-4 py-2 bg-sky-500 text-white rounded-full shadow-md hover:bg-sky-600 transition"
+                    className="text-sm font-semibold px-4 py-2 bg-cyan-600 text-white rounded-full shadow-md hover:bg-cyan-700 transition"
                   >
                     Live Demo
                   </a>
@@ -143,7 +142,7 @@ const MyProjects = () => {
                     href={project.githubLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm font-semibold px-4 py-2 border border-indigo-300 text-indigo-100 rounded-full hover:bg-white/10 transition"
+                    className="text-sm font-semibold px-4 py-2 border border-emerald-400 text-emerald-200 rounded-full hover:bg-white/10 transition"
                   >
                     GitHub
                   </a>

@@ -14,28 +14,28 @@ import { SiTailwindcss, SiMongodb, SiJavascript, SiExpress } from "react-icons/s
 const skillsData = [
   {
     category: "Frontend",
-    color: "from-indigo-700 to-purple-700",
+    color: "from-teal-700 to-cyan-700",
     skills: [
       { name: "HTML5", icon: <FaHtml5 className="text-orange-400" /> },
       { name: "CSS3", icon: <FaCss3Alt className="text-blue-400" /> },
       { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
       { name: "React", icon: <FaReact className="text-cyan-400" /> },
-      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400" /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" /> },
     ],
   },
   {
     category: "Backend",
-    color: "from-indigo-700 to-purple-700",
+    color: "from-teal-700 to-cyan-700",
     skills: [
       { name: "Node.js", icon: <FaNodeJs className="text-green-400" /> },
       { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
       { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
-      { name: "Database", icon: <FaDatabase className="text-purple-400" /> },
+      { name: "Database", icon: <FaDatabase className="text-cyan-400" /> },
     ],
   },
   {
     category: "Tools",
-    color: "from-indigo-700 to-purple-700",
+    color: "from-teal-700 to-cyan-700",
     skills: [
       { name: "GitHub", icon: <FaGithub className="text-white" /> },
       { name: "Figma", icon: <FaFigma className="text-pink-400" /> },
@@ -47,16 +47,16 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative z-10 bg-gradient-to-br from-blue-700 via-indigo-800 to-purple-800 py-16 px-6 md:px-10 rounded-2xl overflow-hidden text-white"
+      className="relative z-10 bg-gradient-to-br from-teal-800 via-slate-900 to-gray-900 py-16 px-6 md:px-10 rounded-2xl overflow-hidden text-white"
     >
       {/* Background Gradient Blobs */}
       <motion.div
-        className="absolute -top-20 -left-32 w-[400px] h-[400px] bg-indigo-400 opacity-20 rounded-full blur-3xl animate-pulse"
+        className="absolute -top-20 -left-32 w-[400px] h-[400px] opacity-20 rounded-full blur-3xl"
         animate={{ y: [0, 20, 0] }}
         transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute -bottom-24 -right-28 w-[300px] h-[300px] bg-purple-400 opacity-20 rounded-full blur-3xl animate-pulse"
+        className="absolute -bottom-24 -right-28 w-[300px] h-[300px] bg-cyan-400 opacity-20 rounded-full blur-3xl animate-pulse"
         animate={{ y: [0, -20, 0] }}
         transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
       />
@@ -64,8 +64,8 @@ const Skills = () => {
       {/* Section Title */}
       <div className="relative z-10 text-center mb-16 max-w-4xl mx-auto">
         <h2 className="text-4xl font-extrabold">My Skills</h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400 mx-auto mt-4 rounded-full" />
-        <p className="text-indigo-300 mt-4">
+        <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 mx-auto mt-4 rounded-full" />
+        <p className="text-emerald-300 mt-4">
           Here are the technologies and tools I use to build modern web applications.
         </p>
       </div>
