@@ -25,6 +25,27 @@ const techIcons = {
 
 const projects = [
   {
+    name: "Building-Management-Project",
+    images: ["https://i.ibb.co.com/zhVgHdtJ/building-management-system.png"],
+    liveLink: "https://building-management-project.web.app/",
+    githubLink:
+      "https://github.com/MDBishalAhmedRafi/building-management-client",
+    stack: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "Stripe",
+      "MongoDB",
+      "Tailwind CSS",
+      "JWT",
+    ],
+    description:
+      "Building-Management-Project is a community-focused web platform where users can Book their apartment, Admin can choose the member and Member can payment with stripe payment method.",
+    challenges: "Handling ensuring role-based routing & Token.",
+    futurePlans: "Add Real Payment method like SSL Commerce",
+    animation: "fade",
+  },
+  {
     name: "Food Sharing Web App",
     images: ["https://i.ibb.co/Q7yjk6Yy/food-share.png"],
     liveLink: "https://ssignment-11.web.app",
@@ -93,7 +114,8 @@ const MyProjects = () => {
         <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 mx-auto my-4 rounded-full" />
 
         <p className="text-center text-emerald-300 max-w-2xl mx-auto mb-12 text-sm sm:text-base px-2">
-          Here are some of the major projects I’ve built recently using modern web technologies.
+          Here are some of the major projects I’ve built recently using modern
+          web technologies.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -112,7 +134,9 @@ const MyProjects = () => {
                 <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
                   {project.name}
                 </h3>
-                <p className="text-emerald-300 text-sm mb-4">{project.description}</p>
+                <p className="text-emerald-300 text-sm mb-4">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.stack.map((tech, i) => (
                     <span
