@@ -96,7 +96,7 @@ const Hero = () => {
             <button
               onClick={() =>
                 window.open(
-                  'https://drive.google.com/uc?export=download&id=11wbd5vpcW3Fz2WUfAobBv1C1QiVN_qwr',
+                  'https://drive.google.com/uc?export=download&id=1TP_6d21NIC6AWYrAO-bAouVL3I6VrWw5',
                   'target_blank'
                 )
               }
